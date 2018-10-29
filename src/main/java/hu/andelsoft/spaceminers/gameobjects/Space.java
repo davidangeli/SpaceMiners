@@ -29,7 +29,7 @@ public class Space extends HashSet<SpaceObject> {
      * @param score Total score availabel in this field.
      */
     public Space(Properties props, int score){
-        setProps(props);
+        setProperties(props);
 
         Garbage = new HashSet<>();
         NewObjects = new HashSet<>();
@@ -137,7 +137,7 @@ public class Space extends HashSet<SpaceObject> {
         return empty;
     }
 
-    private void setProps(Properties props){
+    private void setProperties(Properties props){
         double x = Double.parseDouble(props.getProperty("space.maxx"));
         double y = Double.parseDouble(props.getProperty("space.maxy"));
         double z = Double.parseDouble(props.getProperty("space.maxz"));
